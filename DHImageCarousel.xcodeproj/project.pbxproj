@@ -17,7 +17,6 @@
 		5BF64BA01A11D5C1004B0788 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BF64B9D1A11D5C1004B0788 /* 7.jpg */; };
 		5BF64BA11A11D5C1004B0788 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BF64B9E1A11D5C1004B0788 /* 8.jpg */; };
 		5BF64BA21A11D5C1004B0788 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5BF64B9F1A11D5C1004B0788 /* 9.jpg */; };
-		5BF64BA41A11F58D004B0788 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5BF64BA31A11F58D004B0788 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 		5BF64B9D1A11D5C1004B0788 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		5BF64B9E1A11D5C1004B0788 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		5BF64B9F1A11D5C1004B0788 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
-		5BF64BA31A11F58D004B0788 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +85,6 @@
 		5BF64B701A11B0CF004B0788 /* DHImageCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				5BF64BA31A11F58D004B0788 /* README.md */,
 				5BF64B9D1A11D5C1004B0788 /* 7.jpg */,
 				5BF64B9E1A11D5C1004B0788 /* 8.jpg */,
 				5BF64B9F1A11D5C1004B0788 /* 9.jpg */,
@@ -232,7 +229,6 @@
 			files = (
 				5BF64B941A11B145004B0788 /* DHCarouselView.swift in Sources */,
 				5BF64B761A11B0CF004B0788 /* ViewController.swift in Sources */,
-				5BF64BA41A11F58D004B0788 /* README.md in Sources */,
 				5BF64B741A11B0CF004B0788 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
