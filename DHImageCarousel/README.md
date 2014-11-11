@@ -1,6 +1,12 @@
 DHImageCarousel
 ===============
 
+<img src="./imageCarousel.gif" />
+
+How to use
+==========
+  
+  let carouselView = DHCarouselView(frame: frame) // Add it to anywhere you want as a subview
 
 
 License
