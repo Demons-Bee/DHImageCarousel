@@ -1,7 +1,8 @@
 DHImageCarousel
 ===============
+###图片轮播效果
 
-
+<img src="imageCarousel.gif" />
 
 License
 =======
