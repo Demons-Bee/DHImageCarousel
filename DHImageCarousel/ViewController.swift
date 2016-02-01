@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController,DHCarouselViewDelegate {
 
   var carouselView: DHCarouselView!
-  var timer: NSTimer!
   
   let carouselViewHeight: CGFloat = 215
   

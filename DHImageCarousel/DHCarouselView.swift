@@ -19,7 +19,7 @@ class DHCarouselView: UIView {
   var carouselLoopTimer: NSTimer!
   var carouselDataArray = [String]()
   var carouselPeriodTime = 2.0
-  var carouselAutoplay = true
+  var carouselAutoplay = false
   var delegate: DHCarouselViewDelegate!
   
   let pageControllHeight: CGFloat = 20
@@ -58,12 +58,12 @@ extension DHCarouselView {
       
     }
     
-    carouselScrollView.contentSize = CGSize(width: carouselScrollView.frame.size.width * CGFloat(carouselDataArray.count + 2), height: carouselScrollView.frame.size.height)
+    carouselScrollView.contentSize = CGSize(width: carouselScrollView.frame.size.width * CGFloat(carouselDataArray.count + 2) + 300, height: carouselScrollView.frame.size.height)
     carouselPageControl.numberOfPages = carouselDataArray.count
     
     for i in 0...carouselDataArray.count - 1 {
       let carouselImgName = carouselDataArray[i]
-      let carouselBtn = UIButton(frame: CGRect(x: carouselScrollView.frame.size.width * CGFloat(i + 1), y: 0, width: carouselScrollView.frame.size.width, height: carouselScrollView.frame.size.height))
+      let carouselBtn = UIButton(frame: CGRect(x: carouselScrollView.frame.size.width * CGFloat(i + 1) + 300, y: 0, width: carouselScrollView.frame.size.width, height: carouselScrollView.frame.size.height))
       carouselBtn.setBackgroundImage(UIImage(named: carouselImgName), forState: UIControlState.Normal)
       carouselBtn.setBackgroundImage(UIImage(named: carouselImgName), forState: UIControlState.Highlighted)
       carouselBtn.contentMode = UIViewContentMode.ScaleToFill
@@ -80,7 +80,7 @@ extension DHCarouselView {
     carouselScrollView.addSubview(lastCarouselBtn)
     
     let firstCarouselImg = carouselDataArray[0]
-    let firstCarouselBtn = UIButton(frame: CGRect(origin: CGPoint(x: CGFloat(carouselDataArray.count + 1) * carouselScrollView.frame.size.width, y: 0), size: carouselScrollView.frame.size))
+    let firstCarouselBtn = UIButton(frame: CGRect(origin: CGPoint(x: CGFloat(carouselDataArray.count + 1) * carouselScrollView.frame.size.width + 300, y: 0), size: carouselScrollView.frame.size))
     firstCarouselBtn.setBackgroundImage(UIImage(named: firstCarouselImg), forState: UIControlState.Normal)
     firstCarouselBtn.setBackgroundImage(UIImage(named: firstCarouselImg), forState: UIControlState.Highlighted)
     firstCarouselBtn.contentMode = UIViewContentMode.ScaleToFill
@@ -158,6 +158,15 @@ extension DHCarouselView: UIScrollViewDelegate {
         carouselLoopTimer = NSTimer.scheduledTimerWithTimeInterval(carouselPeriodTime, target: self, selector: Selector("loopCarousel"), userInfo: nil, repeats: true)
       }
     }
+    if scrollView.contentOffset.x > 500 {
+      scrollView.contentInset = UIEdgeInsets(top: 0, left: 200, bottom: 0, right: 0)
+    }
+  }
+  
+  func scrollViewDidScroll(scrollView: UIScrollView) {
+    println(scrollView.contentInset)
+    println(scrollView.contentOffset)
+    
   }
   
   func scrollViewWillBeginDragging(scrollView: UIScrollView) {
